@@ -11,7 +11,6 @@
 	const tooltipState = getContext('tooltip-state') as ReturnType<typeof createTooltipState>;
 
 	$: {
-		console.log({ x, y });
 		if (x !== 0 && y !== 0) {
 			positionSpring.set({
 				x: x,
