@@ -10,41 +10,25 @@
 <Tooltip x={$currentState.x} y={$currentState.y} />
 <!-- <Tooltip {x} {y} /> -->
 
-<svg width="600" height="600">
-	<rect
+<div class="flex flex-col gap-1 mt-44 ml-10">
+	<div
 		role="alert"
-		x="100"
-		y="100"
-		fill="red"
-		width="100"
-		height="100"
+		class="w-20 h-20 bg-red-500"
 		on:mouseenter={() => tooltipState.set(100, 50)}
-	/>
-	<rect
+	></div>
+	<div
 		role="alert"
-		x="100"
-		y="200"
-		fill="blue"
-		width="100"
-		height="100"
+		class="w-20 h-20 bg-blue-500"
 		on:mouseenter={() => tooltipState.set(200, 50)}
-	/>
-	<rect
+	></div>
+	<div
 		role="alert"
-		x="100"
-		y="300"
-		fill="purple"
-		width="100"
-		height="100"
+		class="w-20 h-20 bg-purple-500"
 		on:mouseenter={() => tooltipState.set(300, 50)}
-	/>
-	<rect
+	></div>
+	<div
 		role="alert"
-		x="100"
-		y="400"
-		fill="green"
-		width="100"
-		height="100"
+		class="w-20 h-20 bg-green-500"
 		on:mouseenter={() => tooltipState.set(400, 50)}
-	/>
-</svg>
+	></div>
+</div>
