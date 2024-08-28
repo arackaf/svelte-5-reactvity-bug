@@ -1,10 +1,6 @@
 <script lang="ts">
-	import { setContext } from 'svelte';
-	import { createTooltipState } from './tooltipState';
+	import { tooltipState } from './tooltipState';
 	import Tooltip from './Tooltip.svelte';
-
-	const tooltipState = createTooltipState();
-	setContext('tooltip-state', tooltipState);
 
 	$: ({ currentState } = tooltipState);
 </script>

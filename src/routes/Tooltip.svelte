@@ -1,14 +1,11 @@
 <script lang="ts">
-	import { getContext } from 'svelte';
 	import { spring } from 'svelte/motion';
-	import type { createTooltipState } from './tooltipState';
+	import { tooltipState } from './tooltipState';
 
 	export let x: number;
 	export let y: number;
 
 	const positionSpring = spring({ x, y }, { stiffness: 0.1, damping: 0.5 });
-
-	const tooltipState = getContext('tooltip-state') as ReturnType<typeof createTooltipState>;
 
 	$: {
 		if (x !== 0 && y !== 0) {

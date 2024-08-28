@@ -1,6 +1,6 @@
 import { derived, get, writable } from 'svelte/store';
 
-export function createTooltipState() {
+function createTooltipState() {
 	const state = writable({
 		x: 0,
 		y: 0
@@ -20,3 +20,5 @@ export function createTooltipState() {
 
 	return result;
 }
+
+export const tooltipState = createTooltipState();
