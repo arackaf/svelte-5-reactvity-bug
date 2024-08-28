@@ -3,9 +3,12 @@
 	import Tooltip from './Tooltip.svelte';
 
 	$: ({ currentState } = tooltipState);
+
+	// $: ({ x, y } = $currentState);
 </script>
 
 <Tooltip x={$currentState.x} y={$currentState.y} />
+<!-- <Tooltip {x} {y} /> -->
 
 <svg width="600" height="600">
 	<rect
