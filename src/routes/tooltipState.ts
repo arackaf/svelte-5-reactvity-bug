@@ -10,7 +10,6 @@ export function createTooltipState() {
 
 	const result = {
 		set(x: number, y: number) {
-			console.log({ x, y });
 			state.update((val) => ({ ...val, x, y }));
 		},
 		tooltipVisible() {
